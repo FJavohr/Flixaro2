@@ -1,0 +1,50 @@
+.upcomingResultsPage{
+  min-height: 700px;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  .circle{
+    width: 100px;
+    height: 100px;
+    background-color: initial;
+    border-radius: 50%;
+    border: 2px solid white;
+    border-top:1px aqua solid;
+    animation: rotate .5ms linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%
+);
+  }
+
+}
+.movieCard{
+  position: relative;
+  margin-bottom: 0;
+  .circleRating{
+    position: absolute;
+    left: 0;
+    top: 350px;
+    width: 50px;
+    height: 50px;
+
+  }   
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.movieCard {
+  .circleRating{
+    margin-top: -50px;
+    right: -10px;
+  }
+}
