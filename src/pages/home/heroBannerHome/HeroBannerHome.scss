@@ -1,15 +1,10 @@
-//за градиенты отдельное спасибо gradient generator =]
+///за градиенты отдельное спасибо gradient generator =]
 @import "../../../mixinsTemplate.scss";
 
-.heroBanner {
+.heroBannerHomePage {
   width: 100%;
-  height: 450px;
+  height: 650px;
   background-color: #04152d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
   //media
   @include md {
     height: 700px;
@@ -34,25 +29,26 @@
       }
     }
   }
-  .opacity-layer {
-    width: 100%;
-    height: 250px;
-    background: linear-gradient(
-      180deg,
-      rgba(4, 21, 45, 0) 0%,
-      #04152d 109.17%
-    );
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    
-    @include lg {
-      max-height: 150px;
-    }
+}
+
+.opacity-layer {
+  width: 100%;
+  height: 1000px;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 21, 45, 0) 0%,
+    #04152d 109.17%
+  );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  @include lg {
+    max-height: 150px;
   }
 }
 
-.heroBannerHomeContent {
+.heroBannerContent {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -62,12 +58,12 @@
     position: relative;
     max-width: 800px;
     margin: 0 auto;
-    .title{
-      font-size: 32px; 
+    .title-home{
+      font-size: 100px ;
       font-weight: 700;
       margin-bottom: 10px;
       @include md {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-size: 60px;
       }
     }
@@ -75,4 +71,66 @@
       font-size: 18px;
       font-weight: 500;
     }
+    .searchInput{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      input{
+        width: calc(100% - 100px);
+        height: 50px;
+        margin-top: 20px;
+        background-color: white;
+        outline: none;
+        border: none;
+        border-radius: 30px 0 0 30px;
+        padding: 0 15px;
+        font-size: 14px;
+        @include md {
+          width: calc(100% - 150px);
+          height: 60px;
+          padding: 0 30px;
+        }
+      }
+      button{
+        width: 100px;
+        height: 50px;
+        background: var(--gradient);
+        color: white;
+        outline: none;
+        margin-top: 20px;
+        border: none;
+        border-radius: 0 30px 30px 0;
+        font-size: 16px;
+        cursor: pointer;
+        @include md {
+          width: 150px;
+          height: 60px;
+          font-size: 18px;
+        }
+      }
+    }
   }
+// .heroBannerHomeContent {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   align-items: center;
+//   color: white;
+//   text-align: center;
+//   position: relative;
+//   max-width: 800px;
+//   margin: 0 auto;
+//   .title {
+//     font-size: 32px;
+//     font-weight: 700;
+//     margin-bottom: 10px;
+//     @include md {
+//       margin-bottom: 20px;
+//       font-size: 60px;
+//     }
+//   }
+//   .subTitle {
+//     font-size: 18px;
+//     font-weight: 500;
+//   }
+// }

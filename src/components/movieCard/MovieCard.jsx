@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import dayjs from 'dayjs'
 
-import Img from '../lazyLoadImage/img'
 import CircleRating from '../circleRating/CircleRating'
 import Genres from '../genres/Genres'
 import backfall from '../../assets/backfall.png' 

@@ -1,10 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import {useDispatch } from "react-redux";
 import { fetchDataFromApi } from "./config/api";
 import { getApiConfiguration, getGenres } from "./store/homeSlice";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Header from "./components/header/index.jsx";
 import Footer from "./components/footer/index.jsx";
+import Auth from "./auth/Auth";
 import Home from "./pages/home/Home.jsx";
 import Details from "./pages/details/Details.jsx";
 import Explore from "./pages/explore/Explore";
@@ -15,7 +17,6 @@ import PageNotFound from "./pages/404/PageNotFound";
 import StartPage from "./pages/startPage/StartPage";
 const App = () => {
   const dispatch = useDispatch();
-  const { url } = useSelector((state) => state.home);
   // console.log(url);
 
   useEffect(() => {
@@ -62,6 +63,7 @@ const App = () => {
       <Header/>
       <Routes>
 
+        <Route path="/auth" element={<Auth/>}/>
         <Route path="/" element={<StartPage />} />
         <Route path="/home" element={<Home />} />
         <Route path="/:mediaType/:id" element={<Details />} />

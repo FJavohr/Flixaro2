@@ -51,7 +51,7 @@ const HeroBanner = () => {
         <div className="heroBannerContent">
           <span className="title">Welcome</span>
           <span className="subTitle">
-            Заходите почитать описнаие фильма и посмотреть только лишь трейлеры, хы     
+            Заходите почитать описание фильма и посмотреть только лишь трейлеры (если они есть), хы     
           </span>
           <span className="subTitle">
             Блин ! Могли ведь сделать API с фильмами, которые можно было бы полноценно посмотреть -_-
@@ -75,3 +75,4 @@ const HeroBanner = () => {
 };
 
 export default HeroBanner;
+

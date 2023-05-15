@@ -74,15 +74,15 @@ const Header = () => {
     setShowSearch(false);
   };
   //проверяем тупе, а дальше переход по explore/movie
-    const navigationHandler = (type) => {
-      if(type === "movie"){
-        navigate("/explore/movie")
-      }
-      else{
-        navigate("/explore/tv")
-      }
-      setBurgerMenu(false)
-  }
+  //   const navigationHandler = (type) => {
+  //     if(type === "movie"){
+  //       navigate("/explore/movie")
+  //     }
+  //     else{
+  //       navigate("/explore/tv")
+  //     }
+  //     setBurgerMenu(false)
+  // }
 
   // спустя сто лет, решил написать функцию, которая при нажатии меняет current значение showSearch на противоположное ему и следовательно производит появление или закрытие элемента поиска. 
   const setShowSearchHandler = () => {
@@ -97,7 +97,7 @@ const Header = () => {
         <ul className="menuItems">
           <NavLink className="menuItem" to={'/home'} >Home</NavLink>
           <NavLink className="menuItem" to={'/explore/movie'} >Movies</NavLink>
-          <li className="menuItem" onClick={() => navigationHandler("tv")} >TV Shows</li>
+          <NavLink className="menuItem" to={'explore/tv'} >TV Shows</NavLink>
           <NavLink className="menuItem" to={'/movie/upcoming'} >Upcoming</NavLink>
           <li className={`menuItem `} onClick={openSearch} >
             <HiOutlineSearch className="searchIcon" onClick={setShowSearchHandler}/>

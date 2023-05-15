@@ -10,12 +10,14 @@ const Similar = ({ mediaType, id }) => {
 
   return (
     <ContentWrapper>
-      <Corousel
-        title={title}
-        data={data?.results}
-        loading={loading}
-        endpoint={mediaType}
-      />
+      {data?.results ? (
+        <Corousel
+          title={title}
+          data={data?.results}
+          loading={loading}
+          endpoint={mediaType}
+        />
+      ) : null}
     </ContentWrapper>
   );
 };

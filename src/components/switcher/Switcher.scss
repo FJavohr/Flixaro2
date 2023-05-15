@@ -23,7 +23,7 @@
       cursor: pointer;
       transition: color ease 0.2s;
       &.active{
-        color: white;
+        color: white !important;
       }
     }
     .movingBg{

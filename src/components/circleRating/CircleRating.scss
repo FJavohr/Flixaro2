@@ -2,12 +2,12 @@
   background-color: var(--black);
   border-radius: 50%;
   padding: 2px;
-  .CircleProgressbar-text{
+  .CircularProgressbar-text {
     font-size: 34px;
     font-weight: 700;
     fill: var(--black);
-}
-  .CircleProgressbar-trail{
+  }
+  .CircularProgressbar-trail {
     stroke: transparent;
   }
 }

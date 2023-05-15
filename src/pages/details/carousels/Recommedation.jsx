@@ -9,12 +9,15 @@ const Recommedation = ({ mediaType, id }) => {
 
   return (
     <ContentWrapper>
+    {data?.results ? (
       <Corousel
         title={"Recommendations"}
         data={data?.results}
         loading={loading}
         endpoint={mediaType}
       />
+    ) : null }
+      
     </ContentWrapper>
   );
 };

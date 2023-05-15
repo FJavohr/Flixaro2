@@ -19,7 +19,7 @@ const Switcher = ({ data, onSwitchChange }) => {
         {data.map((switcher, index) => (
           <span
             key={index}
-            className={`switchItem ${selectedSwitcher === index ? "active" : ""}`}
+            className={`switchItem ${selectedSwitcher === index ? "active" : ""} `}
             onClick={() => activeChanger(switcher, index)}
           >
             {switcher}
